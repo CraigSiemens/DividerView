@@ -4,47 +4,32 @@ import Quick
 import Nimble
 import DividerView
 
-class TableOfContentsSpec: QuickSpec {
+class DividerViewSpec: QuickSpec {
     override func spec() {
-        describe("these will fail") {
+        describe("horizontal divider") {
 
-            it("can do maths") {
-                expect(1) == 2
-            }
+//            let divider = DividerView(axis: .horizontal)
+//            
+//            it("should have a intrinsic content height of 1") {
+//                expect(divider.intrinsicContentSize().height).to(equal(1))
+//            }
+//            
+//            it("should have a intrinsic content width of UIViewNoIntrinsicMetric") {
+//                expect(divider.intrinsicContentSize().width).to(equal(UIViewNoIntrinsicMetric))
+//            }
+        }
 
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
+        describe("vertical divider") {
             
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    dispatch_async(dispatch_get_main_queue()) {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        NSThread.sleepForTimeInterval(0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
-            }
+//            let divider = DividerView(axis: .vertical)
+//            
+//            it("should have a intrinsic content height of UIViewNoIntrinsicMetric") {
+//                expect(divider.intrinsicContentSize().height).to(equal(UIViewNoIntrinsicMetric))
+//            }
+//            
+//            it("should have a intrinsic content width of 1") {
+//                expect(divider.intrinsicContentSize().width).to(equal(1))
+//            }
         }
     }
 }

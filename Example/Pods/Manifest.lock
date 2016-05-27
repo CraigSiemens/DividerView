@@ -1,0 +1,22 @@
+PODS:
+  - DividerView (0.1.0)
+  - Nimble (4.0.1)
+  - Quick (0.9.2)
+
+DEPENDENCIES:
+  - DividerView (from `../`)
+  - Nimble (~> 4.0)
+  - Quick (~> 0.8)
+
+EXTERNAL SOURCES:
+  DividerView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DividerView: 83b8f08a12997209ada1194af41fa4f0db11a4a5
+  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+
+PODFILE CHECKSUM: 3402cb523bb812483a4252728fedb0772116ea5e
+
+COCOAPODS: 1.0.0
