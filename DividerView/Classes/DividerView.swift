@@ -56,8 +56,12 @@ public class DividerView: UIView {
     }
     
     private func updateThicknessForWindow(window: UIWindow?) {
-        let screen = window?.screen ?? UIScreen.mainScreen()
-        thickness = 1 / screen.scale
+        #if !TARGET_INTERFACE_BUILDER
+            let screen = window?.screen ?? UIScreen.mainScreen()
+            thickness = 1 / screen.scale
+        #else
+            thickness = 1
+        #endif
     }
     
     override public func willMoveToWindow(newWindow: UIWindow?) {
