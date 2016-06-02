@@ -34,20 +34,22 @@ divider.axis = DividerAxis.horzontal;
 
 2. In the Identity Inspector (⌥⌘3), set the class to `DividerView`.
 
-3. You may also need to set the module to `DividerView`.
+3. You may also need to set the module to `DividerView` if it isnt set automatically.
 
-![class](Images/class.png)
+    ![class](Images/class.png)
 
 4. In the Attribute Inspector (⌥⌘4), set the `vertical` option bool to match the type of divider you want to create (default is NO).
 
-![verical](Images/vertical.png)
+    ![verical](Images/vertical.png)
 
 ## Installation
 
 DividerView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
+```
 pod "DividerView"
+```
 
 ## License
 
