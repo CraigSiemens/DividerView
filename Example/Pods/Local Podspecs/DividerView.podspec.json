@@ -1,9 +1,9 @@
 {
   "name": "DividerView",
-  "version": "0.1.0",
-  "summary": "A short description of DividerView.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DividerView",
+  "version": "1.0.3",
+  "summary": "Create a one pixel line on any device",
+  "description": "Simplifies the creation of a one pixel line on any device.\n* Works with or without autolayout.\n* Can be created programmatically or in storyboards/xibs",
+  "homepage": "https://github.com/CraigSiemens/DividerView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "Craig Siemens": "siemens.craig@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/DividerView.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/CraigSiemens/DividerView.git",
+    "tag": "v1.0.3"
   },
   "platforms": {
     "ios": "8.0"

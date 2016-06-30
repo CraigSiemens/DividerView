@@ -31,5 +31,19 @@ class DividerViewSpec: QuickSpec {
                 expect(divider.intrinsicContentSize().width).to(equal(1))
             }
         }
+        
+        describe("content hugging priority") {
+            let divider = DividerView()
+            
+            it("should have required priority for vertical") {
+                let priority = divider.contentHuggingPriorityForAxis(.Vertical)
+                expect(priority).to(equal(UILayoutPriorityRequired))
+            }
+            
+            it("should have required priority for horizontal") {
+                let priority = divider.contentHuggingPriorityForAxis(.Horizontal)
+                expect(priority).to(equal(UILayoutPriorityRequired))
+            }
+        }
     }
 }

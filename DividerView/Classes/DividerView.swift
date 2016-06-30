@@ -15,7 +15,7 @@ public enum DividerAxis {
 
 @IBDesignable
 public class DividerView: UIView {
-
+    
     // MARK: - Properties
     
     public var axis = DividerAxis.horizontal {
@@ -49,10 +49,17 @@ public class DividerView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupRequiredContentHuggingPriority()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupRequiredContentHuggingPriority()
+    }
+    
+    private func setupRequiredContentHuggingPriority() {
+        setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Vertical)
+        setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Horizontal)
     }
     
     private func updateThicknessForWindow(window: UIWindow?) {
