@@ -1,22 +1,36 @@
 PODS:
-  - DividerView (1.0.4)
-  - Nimble (4.0.1)
-  - Quick (0.9.2)
+  - DividerView (1.0.3)
+  - Nimble (5.0.0-alpha.30p1)
+  - Quick (0.9.3)
 
 DEPENDENCIES:
   - DividerView (from `../`)
-  - Nimble (~> 4.0)
-  - Quick (~> 0.8)
+  - Nimble (from `git@github.com:Quick/Nimble.git`, branch `swift-3.0`)
+  - Quick (from `git@github.com:Quick/Quick.git`, branch `swift-3.0`)
 
 EXTERNAL SOURCES:
   DividerView:
     :path: "../"
+  Nimble:
+    :branch: swift-3.0
+    :git: git@github.com:Quick/Nimble.git
+  Quick:
+    :branch: swift-3.0
+    :git: git@github.com:Quick/Quick.git
+
+CHECKOUT OPTIONS:
+  Nimble:
+    :commit: 220152be528dcc0537764c179c95b8174028c80c
+    :git: git@github.com:Quick/Nimble.git
+  Quick:
+    :commit: 81d2a7bd95ef91e2604ee0431bba6fe59ad662dc
+    :git: git@github.com:Quick/Quick.git
 
 SPEC CHECKSUMS:
-  DividerView: dfbff72c0b408a529fe53239a1972f3338550361
-  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
-  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+  DividerView: 7dc27272d1962c19af99d13cd9da4a7917d33c52
+  Nimble: c5b995b4cd57789ec44b0cfb79640fc00e61a8c7
+  Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
 
-PODFILE CHECKSUM: 5a4a5d30db9d6b12ddf5d66cdd3a78d9f7d7af82
+PODFILE CHECKSUM: 0c3640fc8fd7c8e865e941c48de332dc37ff9a02
 
 COCOAPODS: 1.1.1

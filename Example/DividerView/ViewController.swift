@@ -22,16 +22,16 @@ class ViewController: UIViewController {
     func setupHorizontalDivider() {
         let horizontalDivider = DividerView(axis: .horizontal)
         horizontalDivider.translatesAutoresizingMaskIntoConstraints = false
-        horizontalDivider.backgroundColor = UIColor.blueColor()
+        horizontalDivider.backgroundColor = UIColor.blue
         
         programmaticView.addSubview(horizontalDivider)
         
-        let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-[horizontalDivider]",
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-[horizontalDivider]",
                                                                          options: [],
                                                                          metrics: nil,
                                                                          views: ["horizontalDivider": horizontalDivider])
 
-        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-[horizontalDivider]-|",
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-[horizontalDivider]-|",
                                                                          options: [],
                                                                          metrics: nil,
                                                                          views: ["horizontalDivider": horizontalDivider])
@@ -42,16 +42,16 @@ class ViewController: UIViewController {
     func setupVerticalDivider() {
         let verticalDivider = DividerView(axis: .vertical)
         verticalDivider.translatesAutoresizingMaskIntoConstraints = false
-        verticalDivider.backgroundColor = UIColor.magentaColor()
+        verticalDivider.backgroundColor = UIColor.magenta
         
         programmaticView.addSubview(verticalDivider)
         
-        let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-[verticalDivider]-|",
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-[verticalDivider]-|",
                                                                                  options: [],
                                                                                  metrics: nil,
                                                                                  views: ["verticalDivider": verticalDivider])
         
-        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-[verticalDivider]",
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-[verticalDivider]",
                                                                                    options: [],
                                                                                    metrics: nil,
                                                                                    views: ["verticalDivider": verticalDivider])
