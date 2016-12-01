@@ -20,23 +20,22 @@ public class DividerView: UIView {
     
     public var axis = DividerAxis.horizontal {
         didSet {
-            if axis != oldValue {
-                invalidateIntrinsicContentSize()
-            }
+            invalidateIntrinsicContentSize()
         }
     }
     
-    @IBInspectable var vertical: Bool = false {
-        didSet {
-            axis = (vertical ? .vertical : .horizontal)
+    @IBInspectable var vertical: Bool {
+        get {
+            return axis == .vertical
+        }
+        set {
+            axis = (newValue ? .vertical : .horizontal)
         }
     }
     
     private var thickness: CGFloat = 1 {
         didSet {
-            if thickness != oldValue {
-                invalidateIntrinsicContentSize()
-            }
+            invalidateIntrinsicContentSize()
         }
     }
     
