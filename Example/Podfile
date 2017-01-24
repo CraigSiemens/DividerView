@@ -6,8 +6,8 @@ target 'DividerView_Example' do
   target 'DividerView_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', :git => 'git@github.com:Quick/Quick.git', :branch => 'swift-3.0'
-    pod 'Nimble', :git => 'git@github.com:Quick/Nimble.git', :branch => 'swift-3.0'
+    pod 'Quick'
+    pod 'Nimble'
   end
 end
 
