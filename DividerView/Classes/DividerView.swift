@@ -14,11 +14,11 @@ public enum DividerAxis {
 }
 
 @IBDesignable
-public class DividerView: UIView {
+open class DividerView: UIView {
     
     // MARK: - Properties
     
-    public var axis = DividerAxis.horizontal {
+    open var axis = DividerAxis.horizontal {
         didSet {
             invalidateIntrinsicContentSize()
         }
@@ -33,7 +33,7 @@ public class DividerView: UIView {
         }
     }
     
-    private var thickness: CGFloat = 1 {
+    fileprivate var thickness: CGFloat = 1 {
         didSet {
             invalidateIntrinsicContentSize()
         }
@@ -56,26 +56,26 @@ public class DividerView: UIView {
         setupRequiredContentHuggingPriority()
     }
     
-    private func setupRequiredContentHuggingPriority() {
-        setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Vertical)
-        setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Horizontal)
+    fileprivate func setupRequiredContentHuggingPriority() {
+        setContentHuggingPriority(UILayoutPriorityRequired, for: .vertical)
+        setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
     }
     
-    private func updateThicknessForWindow(window: UIWindow?) {
+    fileprivate func updateThicknessForWindow(_ window: UIWindow?) {
         #if !TARGET_INTERFACE_BUILDER
-            let screen = window?.screen ?? UIScreen.mainScreen()
+            let screen = window?.screen ?? UIScreen.main
             thickness = 1 / screen.scale
         #else
             thickness = 1
         #endif
     }
     
-    override public func willMoveToWindow(newWindow: UIWindow?) {
-        super.willMoveToWindow(newWindow)
+    override open func willMove(toWindow newWindow: UIWindow?) {
+        super.willMove(toWindow: newWindow)
         updateThicknessForWindow(newWindow)
     }
     
-    override public func intrinsicContentSize() -> CGSize {
+    override open var intrinsicContentSize : CGSize {
         var size = CGSize(width: UIViewNoIntrinsicMetric, height: UIViewNoIntrinsicMetric)
         
         switch axis {

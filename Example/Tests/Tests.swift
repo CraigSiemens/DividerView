@@ -11,11 +11,11 @@ class DividerViewSpec: QuickSpec {
             let divider = DividerView(axis: .horizontal)
             
             it("should have a intrinsic content height of 1") {
-                expect(divider.intrinsicContentSize().height).to(equal(1))
+                expect(divider.intrinsicContentSize.height).to(equal(1))
             }
             
             it("should have a intrinsic content width of UIViewNoIntrinsicMetric") {
-                expect(divider.intrinsicContentSize().width).to(equal(UIViewNoIntrinsicMetric))
+                expect(divider.intrinsicContentSize.width).to(equal(UIViewNoIntrinsicMetric))
             }
         }
 
@@ -24,11 +24,11 @@ class DividerViewSpec: QuickSpec {
             let divider = DividerView(axis: .vertical)
             
             it("should have a intrinsic content height of UIViewNoIntrinsicMetric") {
-                expect(divider.intrinsicContentSize().height).to(equal(UIViewNoIntrinsicMetric))
+                expect(divider.intrinsicContentSize.height).to(equal(UIViewNoIntrinsicMetric))
             }
             
             it("should have a intrinsic content width of 1") {
-                expect(divider.intrinsicContentSize().width).to(equal(1))
+                expect(divider.intrinsicContentSize.width).to(equal(1))
             }
         }
         
@@ -36,12 +36,12 @@ class DividerViewSpec: QuickSpec {
             let divider = DividerView()
             
             it("should have required priority for vertical") {
-                let priority = divider.contentHuggingPriorityForAxis(.Vertical)
+                let priority = divider.contentHuggingPriority(for: .vertical)
                 expect(priority).to(equal(UILayoutPriorityRequired))
             }
             
             it("should have required priority for horizontal") {
-                let priority = divider.contentHuggingPriorityForAxis(.Horizontal)
+                let priority = divider.contentHuggingPriority(for: .horizontal)
                 expect(priority).to(equal(UILayoutPriorityRequired))
             }
         }
