@@ -76,7 +76,7 @@ open class DividerView: UIView {
     }
     
     override open var intrinsicContentSize : CGSize {
-        var size = CGSize(width: UIViewNoIntrinsicMetric, height: UIViewNoIntrinsicMetric)
+        var size = CGSize(width: UIView.noIntrinsicMetric, height: UIView.noIntrinsicMetric)
         
         switch axis {
         case .horizontal:
