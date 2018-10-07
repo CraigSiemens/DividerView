@@ -15,7 +15,7 @@ class DividerViewSpec: QuickSpec {
             }
             
             it("should have a intrinsic content width of UIViewNoIntrinsicMetric") {
-                expect(divider.intrinsicContentSize.width).to(equal(UIViewNoIntrinsicMetric))
+                expect(divider.intrinsicContentSize.width).to(equal(UIView.noIntrinsicMetric))
             }
         }
 
@@ -24,7 +24,7 @@ class DividerViewSpec: QuickSpec {
             let divider = DividerView(axis: .vertical)
             
             it("should have a intrinsic content height of UIViewNoIntrinsicMetric") {
-                expect(divider.intrinsicContentSize.height).to(equal(UIViewNoIntrinsicMetric))
+                expect(divider.intrinsicContentSize.height).to(equal(UIView.noIntrinsicMetric))
             }
             
             it("should have a intrinsic content width of 1") {
@@ -37,12 +37,12 @@ class DividerViewSpec: QuickSpec {
             
             it("should have required priority for vertical") {
                 let priority = divider.contentHuggingPriority(for: .vertical)
-                expect(priority).to(equal(UILayoutPriorityRequired))
+                expect(priority).to(equal(UILayoutPriority.required))
             }
             
             it("should have required priority for horizontal") {
                 let priority = divider.contentHuggingPriority(for: .horizontal)
-                expect(priority).to(equal(UILayoutPriorityRequired))
+                expect(priority).to(equal(UILayoutPriority.required))
             }
         }
     }

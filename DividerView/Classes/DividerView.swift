@@ -57,8 +57,8 @@ open class DividerView: UIView {
     }
     
     fileprivate func setupRequiredContentHuggingPriority() {
-        setContentHuggingPriority(UILayoutPriorityRequired, for: .vertical)
-        setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
+        setContentHuggingPriority(.required, for: .vertical)
+        setContentHuggingPriority(.required, for: .horizontal)
     }
     
     fileprivate func updateThicknessForWindow(_ window: UIWindow?) {
@@ -76,7 +76,7 @@ open class DividerView: UIView {
     }
     
     override open var intrinsicContentSize : CGSize {
-        var size = CGSize(width: UIViewNoIntrinsicMetric, height: UIViewNoIntrinsicMetric)
+        var size = CGSize(width: UIView.noIntrinsicMetric, height: UIView.noIntrinsicMetric)
         
         switch axis {
         case .horizontal:

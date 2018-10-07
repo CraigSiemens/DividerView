@@ -2,12 +2,12 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode8.2
-language: objective-c
+osx_image: xcode10
+language: swift
 rvm: 2.2.2
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - gem install xcpretty
 script:
-- set -o pipefail && xcodebuild test -workspace Example/DividerView.xcworkspace -scheme DividerView-Example -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.1' | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/DividerView.xcworkspace -scheme DividerView-Example -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0' | xcpretty
 - pod lib lint
